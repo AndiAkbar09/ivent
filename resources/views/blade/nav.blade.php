@@ -17,10 +17,10 @@
                             <a href="{{route('kegiatans')}}" class="nav-link">Master Kegiatan</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Master Pendaftaran</a>
+                            <a href="{{route('pendaftarans')}}" class="nav-link">Master Pendaftaran</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">User</a>
+                            <a href="{{route('users')}}" class="nav-link">User</a>
                         </li>
                     </ul>
 

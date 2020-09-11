@@ -10,7 +10,7 @@
                     <form action="">
                         <div class="row">
 
-                            <div class="col-md-6">
+                        <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Kode Kegiatan</label>
                                     <input type="text" name="" class="form-control" id="" readonly>
@@ -46,7 +46,7 @@
 
                             </div>
                         </div>
-                        <div class="">
+                        <div >
                             <button type="submit" class="btn btn-outline-info">Masukan Kegiatan Baru</button>
                         </div>
                     </form>
