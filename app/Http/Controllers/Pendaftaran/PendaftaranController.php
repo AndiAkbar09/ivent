@@ -16,4 +16,8 @@ class PendaftaranController extends Controller
     {
         return view('backend.pendaftaran.create');
     }
+    public function show()
+    {
+        return view('backend.pendaftaran.show');
+    }
 }

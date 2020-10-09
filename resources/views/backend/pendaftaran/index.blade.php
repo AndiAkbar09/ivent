@@ -32,7 +32,7 @@
                                     <td>11-09-2011</td>
                                     <td>y</td>
                                     <td>
-                                        <a href="" class="btn btn-outline-info">Lihat</a>
+                                        <a href="{{route('pendaftarans.Showpendaftaran')}}" class="btn btn-outline-info">Lihat</a>
                                     </td>
                                 </tr>
                             </tbody>

@@ -33,7 +33,7 @@
                                 <td>transformasi</td>
                                 <td>Kepp yo</td>
                                 <td>
-                                    <a href="" class="btn btn-outline-primary btn-sm">Edit</a>
+                                    <a href="{{route('kegiatans.formEdit')}}" class="btn btn-outline-primary btn-sm">Edit</a>
                                     <a href="" class="btn btn-outline-danger btn-sm">Hapus</a>
                                 </td>
                             </tr>
