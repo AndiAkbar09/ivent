@@ -13,9 +13,9 @@ class Kegiatan extends Model
     {
         $tanggal = getdate();
         $tahun = substr($tanggal['year'], 2,2);
-        $_kode = "YAHAHA HAYYUK/$tahun";
+        $_kode = "Tournament Al-Bahri/$tahun";
         
-        $kode = Kegiatan::where('kode_kegiatan','like','YAHAHA HAYYUK'.$tahun."__")->orderBy('kode_kegiatan');
+        $kode = Kegiatan::where('kode_kegiatan','like','Tournament Al-Bahri'.$tahun."__")->orderBy('kode_kegiatan');
         
         $kode = $kode->count();
         if($kode == 0){

@@ -25,7 +25,10 @@ Route::group(['prefix'=> 'kegiatans'], function(){
 
     Route::get('create','KegiatanController@create')->name('kegiatans.create');
 
+    Route::post('save-Newkegiatan','KegiatanController@store')->name('kegiatans.save-Newkegiatan');
+    
     Route::get('formEdit','KegiatanController@edit')->name('kegiatans.formEdit');
+
 });
 
 // route pendaftaran
