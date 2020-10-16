@@ -10,8 +10,7 @@ use Intervention\Image\Facades\Image;
 class KegiatanController extends Controller
 {
 
-    public $kegiatan;
-
+    
     public function __construct()
 
     {
@@ -20,14 +19,16 @@ class KegiatanController extends Controller
 
     public function index()
     {   
+        $kegiatans = Kegiatan::all();
         
-        return view('backend.kegiatan.index');
+        return view('backend.kegiatan.index', compact('kegiatans'));
     }
     
     public function create()
     {
-        $getKode = $this->kegiatan->generateCode();
-        return view('backend.kegiatan.create', compact('getKode'));
+        $getkode = $this->kegiatan->generateCode();
+        
+        return view('backend.kegiatan.create', compact('getkode'));
         
     }
 
@@ -35,20 +36,18 @@ class KegiatanController extends Controller
     {
         $kegiatan = Kegiatan::create($this->validateRequest());
         $this->storeImage($kegiatan);
-        
-        return redirect()->back()-with(['success' => 'Kegiatan berhasil dibuat']);
+        return redirect()->back()->with(['success' => 'Kegiatan berhasil dibuat']);
     }
-        private function validateRequest()
-        {
+        private function validateRequest(){
             return tap(request()->validate([
-                'kode_kegiatan' => 'required',
-                'nama_kegiatan' => 'required',
-                'tanggal' => 'required',
-                'keterangan' => 'required',
-                'status_kegiatan' => 'required',
-                'harga_tiket' => 'required',
-                'images' => 'file|image|max:5000',
-                'kapasitas' => 'required',
+                'kode_kegiatan'     => 'required',
+                'nama_kegiatan'     => 'required',
+                'tanggal'           => 'required',
+                'keterangan'        => 'required',
+                'status_kegiatan'   => 'required',
+                'harga_tiket'       => 'required',
+                'images'            => 'file|image|max:5000',
+                'kapasitas'         => 'required',
             ]), function(){
                 if(request()->hasFile('images')){
                     request()->validate([
@@ -64,7 +63,6 @@ class KegiatanController extends Controller
                     'images' => request()->images->store('uploads','public'),
                 ]);
                 $image = Image::make(public_path('storage/'. $kegiatan->images))->fit(300,300,null, 'top-left');
-
                 $image->save();
             }
         }

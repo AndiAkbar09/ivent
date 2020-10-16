@@ -18,25 +18,27 @@
                         <thead>
                             <tr>
                                 <th>Kode kegiatan</th>
-                                <th>Nama Kegiatan</th>
                                 <th>Tanggal</th>
-                                <th>Informasi</th>
                                 <th>Status</th>
                                 <th>Option</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach($kegiatans as $kegiatan)
                             <tr>
-                                <td>siap123</td>
-                                <td>Akujadingeri</td>
-                                <td>09/09/09</td>
-                                <td>transformasi</td>
-                                <td>Kepp yo</td>
                                 <td>
-                                    <a href="{{route('kegiatans.formEdit')}}" class="btn btn-outline-primary btn-sm">Edit</a>
+                                    <a href="{{route('kegiatans.formEdit')}}" class="btn btn-outline-primary btn-sm">{{$kegiatan->kode_kegiatan}}</a>
+                                </td>
+                                <td>{{$kegiatan->tanggal}}</td>
+                                <td>{{$kegiatan->status_kegiatan}}</td>
+                                <td>
+                                    <img src="{{asset('storage/'.$kegiatan->images)}}" alt="" class="rounded-circle" weigth="10px" heigth="10px">    
+                                </td>
+                                <td>
                                     <a href="" class="btn btn-outline-danger btn-sm">Hapus</a>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

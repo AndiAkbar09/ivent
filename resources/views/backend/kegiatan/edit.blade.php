@@ -13,28 +13,28 @@
                         <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Kode Kegiatan</label>
-                                    <input type="text" name="" class="form-control" id="" readonly>
+                                    <input type="text" name="" class="form-control" id="" >
                                 </div>
 
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Nama Kegiatan</label>
-                                    <input type="text" name="" class="form-control" id="" readonly>
+                                    <input type="text" name="" class="form-control" id="" >
                                 </div>
 
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Tanggal</label>
-                                    <input type="text" name="" class="form-control" id="" readonly>
+                                    <input type="text" name="" class="form-control" id="" >
                                 </div>
 
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Status</label>
-                                    <input type="text" name="" class="form-control" id="" readonly>
+                                    <input type="text" name="" class="form-control" id="" >
                                 </div>
 
                             </div>
