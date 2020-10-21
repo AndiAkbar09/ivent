@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row d-flex justify-content-center">
-        <div class="col-md-6 ">
+        <div class="col-md-8 ">
 
             <div class="card border-0 shadow">
                 <div class="card-body">
@@ -28,7 +28,6 @@
                                     <input type="text" name="nama_kegiatan" class="form-control" id="" >
                                 </div>
                             </div>
-                                {{$errors->first('name')}}
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Tanggal</label>
@@ -68,6 +67,7 @@
                         </div>
                         <div >
                             <button type="submit" class="btn btn-outline-info">Masukan Kegiatan Baru</button>
+                            <a href="{{route('kegiatans')}}" class="btn btn-outline-secondary">Kembali</a>
                         </div>
                     </form>
                 </div>

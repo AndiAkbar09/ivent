@@ -27,7 +27,11 @@ Route::group(['prefix'=> 'kegiatans'], function(){
 
     Route::post('save-Newkegiatan','KegiatanController@store')->name('kegiatans.save-Newkegiatan');
     
-    Route::get('formEdit','KegiatanController@edit')->name('kegiatans.formEdit');
+    Route::get('formEdit/{kegiatan}','KegiatanController@edit')->name('kegiatans.formEdit');
+    
+    Route::patch('update/{kegiatan}','KegiatanController@update')->name('kegiatans.update');
+
+    Route::delete('formDelete/{kegiatan}','KegiatanController@destroy')->name('kegiatans.formDelete');
 
 });
 

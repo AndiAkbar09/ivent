@@ -20,22 +20,27 @@
                                 <th>Kode kegiatan</th>
                                 <th>Tanggal</th>
                                 <th>Status</th>
+                                <th>image</th>
                                 <th>Option</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($kegiatans as $kegiatan)
+                            @foreach ($kegiatans as $k)
                             <tr>
                                 <td>
-                                    <a href="{{route('kegiatans.formEdit')}}" class="btn btn-outline-primary btn-sm">{{$kegiatan->kode_kegiatan}}</a>
+                                    <a href="{{route('kegiatans.formEdit', $k->id)}}" class="btn btn-outline-primary btn-sm">{{$k->kode_kegiatan}}</a>
                                 </td>
-                                <td>{{$kegiatan->tanggal}}</td>
-                                <td>{{$kegiatan->status_kegiatan}}</td>
+                                <td>{{$k->tanggal}}</td>
+                                <td>{{$k->status_kegiatan}}</td>
                                 <td>
-                                    <img src="{{asset('storage/'.$kegiatan->images)}}" alt="" class="rounded-circle" weigth="10px" heigth="10px">    
+                                    <img src="{{asset('storage/'.$k->images)}}" alt="" class="rounded" width="50px   " heigth="10px ">    
                                 </td>
                                 <td>
-                                    <a href="" class="btn btn-outline-danger btn-sm">Hapus</a>
+                                    <form action="{{route('kegiatans.formDelete', $k->id)}}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                        <button type="submit" class="btn btn-outline-danger btn-sm">Hapus</button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach
