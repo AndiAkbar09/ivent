@@ -1,4 +1,5 @@
 @extends('layouts.app')
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 @section('content')
 <div class="container">
@@ -33,7 +34,7 @@
                                 <td>{{$k->tanggal}}</td>
                                 <td>{{$k->status_kegiatan}}</td>
                                 <td>
-                                    <img src="{{asset('storage/'.$k->images)}}" alt="" class="rounded" width="50px   " heigth="10px ">    
+                                    <img src="{{asset('storage/'.$k->images)}}" alt="" class="rounded" height="20%">    
                                 </td>
                                 <td>
                                     <form action="{{route('kegiatans.formDelete', $k->id)}}" method="post">

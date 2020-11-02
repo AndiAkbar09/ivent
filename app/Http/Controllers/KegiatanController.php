@@ -3,14 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Kegiatan;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
 class KegiatanController extends Controller
 {
-
-    
     public function __construct()
 
     {
@@ -26,9 +23,8 @@ class KegiatanController extends Controller
     
     public function create()
     {
-        $getkode = $this->kegiatan->generateCode();
         
-        return view('backend.kegiatan.create', compact('getkode'));
+        return view('backend.kegiatan.create');
         
     }
     public function store()
@@ -74,7 +70,6 @@ class KegiatanController extends Controller
 
     private function validateRequest(){
         return tap(request()->validate([
-            'kode_kegiatan'     => 'required',
             'nama_kegiatan'     => 'required',
             'tanggal'           => 'required',
             'keterangan'        => 'required',

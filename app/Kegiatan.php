@@ -2,30 +2,25 @@
 
 namespace App;
 
+use Alfa6661\AutoNumber\AutoNumberTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class Kegiatan extends Model
 {
+    use AutoNumberTrait;
+
     protected $table = 'kegiatans';
     protected $guarded = [];
 
-    public function generateCode()
+    public function getAutoNumberOptions()
     {
-        $tanggal = getdate();
-        $tahun = substr($tanggal['year'], 2,2);
-        $_kode = "Tournament Al-Bahri/$tahun";
-        
-        $kode = Kegiatan::where('kode_kegiatan','like','Tournament Al-Bahri'.$tahun."__")->orderBy('kode_kegiatan');
-        
-        $kode = $kode->count();
-        if($kode == 0){
-            $kode = $_kode."001";
-        }else{
-            $last = $kode+1;
-            
-            $kode ="$_kode".str_pad($last, 3, '0', STR_PAD_LEFT);
-        }
-
-        return $kode;
+        return [
+            'kode_kegiatan' => [
+                'format' => function () {
+                    return date('Y.m.d') . '/AB-EV/?'; 
+                },
+                'length' => 5 
+            ]
+        ];
     }
 }

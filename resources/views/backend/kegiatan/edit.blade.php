@@ -20,12 +20,6 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="">Kode Kegiatan</label>
-                                    <input type="text" name="kode_kegiatan" class="form-control" value="{{$kegiatan->kode_kegiatan}}"  id="" >
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
                                     <label for="">Nama Kegiatan</label>
                                     <input type="text" name="nama_kegiatan" class="form-control" value="{{$kegiatan->nama_kegiatan}}"id="" >
                                 </div>

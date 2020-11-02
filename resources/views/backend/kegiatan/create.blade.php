@@ -18,12 +18,6 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="">Kode Kegiatan</label>
-                                    <input type="text" name="kode_kegiatan" class="form-control" value="{{ $getkode }}" id="" >
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
                                     <label for="">Nama Kegiatan</label>
                                     <input type="text" name="nama_kegiatan" class="form-control" id="" >
                                 </div>
@@ -68,6 +62,7 @@
                         <div >
                             <button type="submit" class="btn btn-outline-info">Masukan Kegiatan Baru</button>
                             <a href="{{route('kegiatans')}}" class="btn btn-outline-secondary">Kembali</a>
+                            <a href="{{route('kegiatans.create')}}" class="btn btn-outline-secondary">cancel</a>
                         </div>
                     </form>
                 </div>
