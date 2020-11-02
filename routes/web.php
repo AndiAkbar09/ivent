@@ -48,4 +48,6 @@ Route::group(['prefix'=> 'pendaftarans'], function(){
 // route user
 Route::group(['prefix'=> 'users'], function(){
     Route::get('index','User\UserController@index')->name('users');
+
+    Route::get('check', 'Kegiatan\ActifityController@index')->name('cek-kegiatan');
 });

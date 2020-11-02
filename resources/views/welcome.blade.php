@@ -27,9 +27,9 @@
         <div class="nav-scroller bg-white shadow-sm">
             <nav class="nav nav-underline ml-4 py-2">
                 <a href="" class="nav-link">
-                    <h6 class="text-muted">Home</h6>
+                    <h6 class="text-muted ">Home</h6>
                 </a>
-                <a href="{{route('kegiatans')}}" class="nav-link">
+                <a href="{{route('cek-kegiatan')}}" class="nav-link">
                     <h6 class="text-muted">Kegiatan</h6>
                 </a>
                 <a href="" class="nav-link">
@@ -47,7 +47,7 @@
         
         <div class="container py-3">
             <nav aria-label="breadcrumb ">
-                <ol class="breadcrumb bg-white shadow-sm">
+                <ol class="breadcrumb bg-white justify-content-center">
                     <li class="breadcrumb-item active" aria-current="page">
                         HOME
                     </li>
@@ -91,7 +91,7 @@
 
         <div class="container py-3">
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb bg-white shadow-sm">
+                <ol class="breadcrumb bg-white d-flex justify-content-center">
                     <li class="breadcrumb-item active" aria-current="page">
                         KEGIATAN
                     </li>
@@ -102,30 +102,32 @@
             <div class="col-md-12">
                 <div class="row">
                     <div class="d-flex justify-content-center">
-                    <div class="col-md-4">
-                        <div class="card border-0 shadow-sm">
-                            <img src="{{asset('img/relaunch.png')}}"  alt="" class="card-img-top">
-                            <div class="card-body">
-                                <h3>Manage Event</h3>
-                                <p> Kegiatan sedang berlansung.... </p>
-                                <button type="submit" class="btn btn-outline-primary">ACTIVE</button>
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm">
+                                <img src="{{asset('img/relaunch.png')}}"  alt="" class="card-img-top">
+                                <div class="card-body">
+                                    <h3>Manage Event</h3>
+                                    <p> Kegiatan sedang berlansung.... </p>
+                                    <button type="submit" class="btn btn-outline-primary">
+                                        ACTIVE
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card border-0 shadow-sm">
-                            <img src="{{asset('img/relaunch.png')}}"  alt="" class="card-img-top">
-                            <div class="card-body">
-                                <h3>Manage Event</h3>
-                                <p> Soon... </p>
-                                <button class="btn btn-outline-success" disabled>
-                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                    NON ACTIVE
-                                </button>
-                                
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm">
+                                <img src="{{asset('img/launch.png')}}"  alt="" class="card-img-top">
+                                <div class="card-body">
+                                    <h3>Manage Event</h3>
+                                    <p> Soon... </p>
+                                    <button class="btn btn-outline-success" disabled>
+                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                        NON ACTIVE
+                                    </button>
+                                    
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
